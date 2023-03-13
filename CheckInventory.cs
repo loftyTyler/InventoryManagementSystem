@@ -31,7 +31,11 @@ namespace InventoryManagementSystem
         {
             using (var inv = new invManagementEntities())
             {
-                foreach (var myEntity in inv.invDatabases)
+                var nonNullItems = inv.invDatabases
+                    .Where(x => x.itemLocation != null)
+                    .ToList();
+
+                foreach (var myEntity in nonNullItems)
                 {
                     dgvUser.Rows.Add(myEntity.itemName, myEntity.itemQty, myEntity.itemLocation, myEntity.itemClass);
                 }
