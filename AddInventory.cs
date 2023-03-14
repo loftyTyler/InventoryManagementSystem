@@ -32,14 +32,23 @@ namespace InventoryManagementSystem
                         {
                             invDatabase inv = new invDatabase();
                             invManagementEntities invEntities = new invManagementEntities();
-                            inv.itemName = itemNameInput.Text;
-                            inv.itemQty = Int16.Parse(itemQtyInput.Text);
-                            inv.itemLocation = itemLocationInput.Text;
-                            //inv.itemClass = itemClassInput.Text;
-                            inv.itemClass = classDropDown.Text;
-                            invEntities.invDatabases.Add(inv);
-                            invEntities.SaveChanges();
-                            MessageBox.Show("Item added successfully.");
+                            var nameRow = invEntities.invDatabases.FirstOrDefault(a => a.itemName == itemNameInput.Text);
+                            if (nameRow != null)
+                            {                       
+                                MessageBox.Show("Item is already in Database");
+                            } else
+                            {
+                                inv.itemName = itemNameInput.Text;
+                                inv.itemQty = Int16.Parse(itemQtyInput.Text);
+                                inv.itemLocation = itemLocationInput.Text;
+                                //inv.itemClass = itemClassInput.Text;
+                                inv.itemClass = classDropDown.Text;
+                                invEntities.invDatabases.Add(inv);
+                                invEntities.SaveChanges();
+                                MessageBox.Show("Item added successfully.");
+                            }
+
+                            
                         } else
                         {
                             MessageBox.Show("Enter a Classification");

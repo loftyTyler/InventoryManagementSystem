@@ -30,36 +30,55 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchBoxLabel = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.searchBoxLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.searchBoxLabel);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 341);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 54);
+            this.panel1.Size = new System.Drawing.Size(698, 54);
             this.panel1.TabIndex = 0;
+            // 
+            // searchBoxLabel
+            // 
+            this.searchBoxLabel.AutoSize = true;
+            this.searchBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBoxLabel.ForeColor = System.Drawing.Color.White;
+            this.searchBoxLabel.Location = new System.Drawing.Point(118, 21);
+            this.searchBoxLabel.Name = "searchBoxLabel";
+            this.searchBoxLabel.Size = new System.Drawing.Size(105, 18);
+            this.searchBoxLabel.TabIndex = 1;
+            this.searchBoxLabel.Text = "Search Box: ";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(240, 20);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(335, 22);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvUser
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -77,7 +96,7 @@
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 24;
-            this.dgvUser.Size = new System.Drawing.Size(702, 341);
+            this.dgvUser.Size = new System.Drawing.Size(698, 341);
             this.dgvUser.TabIndex = 1;
             // 
             // Column1
@@ -111,33 +130,15 @@
             this.Column3.Name = "Column3";
             this.Column3.Width = 105;
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(240, 20);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(335, 22);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // searchBoxLabel
-            // 
-            this.searchBoxLabel.AutoSize = true;
-            this.searchBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBoxLabel.ForeColor = System.Drawing.Color.White;
-            this.searchBoxLabel.Location = new System.Drawing.Point(129, 21);
-            this.searchBoxLabel.Name = "searchBoxLabel";
-            this.searchBoxLabel.Size = new System.Drawing.Size(105, 18);
-            this.searchBoxLabel.TabIndex = 1;
-            this.searchBoxLabel.Text = "Search Box: ";
-            // 
             // CheckInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 395);
+            this.ClientSize = new System.Drawing.Size(698, 395);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.panel1);
             this.Name = "CheckInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInventory";
             this.Load += new System.EventHandler(this.CheckInventory_Load);
             this.panel1.ResumeLayout(false);

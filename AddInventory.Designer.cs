@@ -37,7 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.classDropDown = new System.Windows.Forms.ComboBox();
-            this.addCategory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +102,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -114,7 +113,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Red;
+            this.panel2.BackColor = System.Drawing.Color.Blue;
             this.panel2.Controls.Add(this.submitItemBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 387);
@@ -132,23 +131,11 @@
             this.classDropDown.TabIndex = 9;
             this.classDropDown.Text = "Category";
             // 
-            // addCategory
-            // 
-            this.addCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCategory.Location = new System.Drawing.Point(75, 327);
-            this.addCategory.Name = "addCategory";
-            this.addCategory.Size = new System.Drawing.Size(213, 34);
-            this.addCategory.TabIndex = 10;
-            this.addCategory.Text = "Add Different Category";
-            this.addCategory.UseVisualStyleBackColor = true;
-            this.addCategory.Click += new System.EventHandler(this.addCategory_Click);
-            // 
             // AddInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 450);
-            this.Controls.Add(this.addCategory);
             this.Controls.Add(this.classDropDown);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -157,6 +144,7 @@
             this.Controls.Add(this.itemNameInput);
             this.Controls.Add(this.label2);
             this.Name = "AddInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddInventory";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -177,6 +165,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.ComboBox classDropDown;
-        private System.Windows.Forms.Button addCategory;
     }
 }
